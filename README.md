@@ -12,7 +12,7 @@ In this lesson, we'll get to know ES2015's let keyword. We'll see that let carri
 
 ## Function Scope vs Block Scope
 
-The let keyword is an alternative to using the var keyword to declare variables . "let" behaves more in line with other common programming languages that use block scope. To understand block scope let us first describe blocks.
+The let keyword is an alternative to using the var keyword to declare variables . "let" behaves more in line with other programming languages like C or Java that use block scope. To understand block scope let us first describe blocks.
 
 ### What are blocks?
 
