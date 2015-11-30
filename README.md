@@ -12,17 +12,11 @@ In this lesson, we'll get to know ES2015's let keyword. We'll see that let carri
 
 ## Function Scope vs Block Scope
 
-The let keyword is an alternative to using the var keyword to declare variables . "let" behaves more in line with other common programming languages that use block scope. To understand block scope let us first describe blocks.
+The let keyword is an alternative to using the var keyword to declare variables . "let" behaves more in line with other programming languages like C or Java that use block scope. To understand block scope let us first describe blocks.
 
 ### What are blocks?
 
-A "block" is a way to group several statements of code together. We describe the starting and ending points of a block using curly braces `{}`. In JavaScript this can be seen below in the following examples: such as the code in between function braces,  
-```javascript
-function printFeed() {
-  // this defines a block.
-}
-```  
-if/else statements,  
+A "block" is a way to group several statements of code together. We describe the starting and ending points of a block using curly braces `{}`. In JavaScript this can be seen below in the following examples: such as if/else statements,  
 ```javascript
 if (fish !== 'extinct') {
   // this also defines a block.
@@ -40,7 +34,7 @@ or a generic blocks defined by just braces alone.
   // all code here is also a generic block.
 }
 ```  
-Again, the important character to distingush blocks are the curly braces `{}`.
+Again, the important character to distingush these blocks are the curly braces `{}`.
 
 To appreciate how the let keyword differs let's first take a look at how the var keyword scopes variables.
 
