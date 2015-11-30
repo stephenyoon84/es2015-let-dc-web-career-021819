@@ -1,0 +1,13 @@
+languages:
+ - javascript
+tags: 
+ - es2015
+ - let
+ - var
+ - const
+ - scope
+ - WIP
+type:
+ - readme
+ - lesson
+resources: 0
