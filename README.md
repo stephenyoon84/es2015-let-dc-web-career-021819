@@ -8,7 +8,9 @@ In this lesson, we'll get to know ES2015's let keyword. We'll see that let carri
 
 1. Understand how to declare variables using the let keyword.
 2. Understand the scoping differences between let and var.
-3. Appreciate how let prevents variable hoisting issues. 
+3. Appreciate how let prevents variable hoisting issues.
+
+<!-- iframe of video lecture goes here -->
 
 ## Function Scope vs Block Scope
 
