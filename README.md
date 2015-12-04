@@ -10,6 +10,8 @@ In this lesson, you will get to know ES2015's let keyword.
 2. Understand the scoping differences between let and var.
 3. Understand how let hoists differently than var.
 
+## ~ 5min
+
 <!-- iframe of video lecture goes here -->
 
 *The code examples from this lesson can be run by pasting them into [Babel's online REPL](https://babeljs.io/repl/)*
