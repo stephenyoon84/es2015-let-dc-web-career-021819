@@ -18,7 +18,7 @@ In this lesson, you will get to know ES2015's let keyword.
 
 ## Function Scope vs Block Scope
 
-The let keyword is an alternative to using the var keyword to declare variables. "let" behaves more in line with other programming languages like C or Java that use block scope. Function Scope (also known as lexical scope) means that variables declared within a function are on accessible to be read or changed inside of that function. Block scope alternatovely limits variables access to inside of a code block instead. To understand better understand this  let's first describe blocks.
+The let keyword is an alternative to using the var keyword to declare variables. "let" behaves more in line with other programming languages like C or Java that use block scope. Block Scope means that variables have limited access within curly braces `{}` in the code. Function Scope (also known as lexical scope) means that variables declared within a function have limited access only inside of that function. To better understand this, let's first look at some blocks.
 
 ### What are blocks?
 
@@ -104,9 +104,9 @@ function advice(age) {
 
 advice(19);
 ```  
-So hosting is when JavaScript automatically lifts the variable declaration to the top of the function scope. `var suggestion, praise;` is declared at the top iof the function, but no value is assigned at that point. This means that when we try to log its value inside of the function before we have assigned a value, it will hold the value of undefined. It is treated as a variable that has been named but is holding no value up until the point that we set a value inside our if/else condition. If the else condition never runs such as in the case above then its value remains undefined.
+Hpisting gives us `var suggestion, praise;` being declared at the top of the function, but no value is assigned at that point. This means that when we try to log its value inside of the function before we have assigned a value, it will hold the value of undefined. It is treated as a variable that has been named but is holding no value. If the else condition never runs such as in the case above then its value remains undefined.
 
-It would be nice to get a proper error message in these situations and have some control to prevent JavaScript from hoisting variables to the top of the function. To protect ourselves it would be ideal in this case to limit the scope of the variables to inside the blocks of the if/else `{}` curly braces.
+It would be nice to get a proper error message in these situations and have some control to prevent JavaScript from hoisting variables to the top of the function. To protect ourselves it would be ideal in this case to limit the scope of the variables to inside the blocks of the if/else `{}` curly braces instead of having them scoped to the entire function.
 
 ## Introducing Let
 
@@ -127,7 +127,7 @@ function advice(age) {
 advice(19);
 advice(12);
 ```  
-The previous code illustrates that the variables declared using the let keyword are scoped within the if/else block instead of the entire function. The console logs inside the if/else blocks report the correct values, where as logging the values outside of the if/else blocks throws an the expected error message.
+The code above illustrates that the variables declared using the let keyword are scoped within the if/else block instead of the entire function. The console logs inside the if/else blocks report the correct values, where as logging the values outside of the if/else blocks throws the expected error message.
 
 ## Summary
 
