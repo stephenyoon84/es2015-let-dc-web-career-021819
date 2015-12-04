@@ -49,7 +49,7 @@ function birthday(age) {
   if (age > 18) {
     var response = "Hope your saving for retirement...";
   } else {
-    var response = "Happy Bithday kid!";
+    var response = "Happy birthday kid!";
   }
   return response;
 }
