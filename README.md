@@ -10,7 +10,7 @@ In this lesson, you will get to know ES2015's let keyword.
 2. Understand the scoping differences between let and var.
 3. Understand how let hoists differently than var.
 
-## ~ 5min
+## ~ ?min
 
 <!-- iframe of video lecture goes here -->
 
