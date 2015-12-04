@@ -1,7 +1,5 @@
 # Using The Let Keyword
 
-*Note: The code examples from this lesson can be run by pasting them into [Babel's online REPL](https://babeljs.io/repl/)*
-
 ## Overview
 
 In this lesson, you will get to know ES2015's let keyword.
@@ -13,6 +11,8 @@ In this lesson, you will get to know ES2015's let keyword.
 3. Understand how let hoists differently than var.
 
 <!-- iframe of video lecture goes here -->
+
+*The code examples from this lesson can be run by pasting them into [Babel's online REPL](https://babeljs.io/repl/)*
 
 ## Function Scope vs Block Scope
 
