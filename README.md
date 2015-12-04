@@ -16,7 +16,7 @@ The following code below can be run in Terminal by using ...
 
 ## Function Scope vs Block Scope
 
-The let keyword is an alternative to using the var keyword to declare variables. "let" behaves more in line with other programming languages like C or Java that use block scope. To understand block scope let us first describe blocks.
+The let keyword is an alternative to using the var keyword to declare variables. "let" behaves more in line with other programming languages like C or Java that use block scope. Function Scope (also known as lexical scope) means that variables declared within a function are on accessible to be read or changed inside of that function. Block scope alternatovely limits variables access to inside of a code block instead. To understand better understand this  let's first describe blocks.
 
 ### What are blocks?
 
@@ -42,7 +42,7 @@ Again, the important character to distingush these blocks are the curly braces `
 
 To appreciate how the let keyword differs let's first take a look at how the var keyword scopes variables.
 
-### Lexical (Function) Scope and Hoisting
+### Function Scope and Hoisting
 
 In JavaScript using the var keyword, variables are lexically scoped to the function they are within. This means that variables that are declared within the function declaration are only accessible inside of that function and are not accessable outside of that function. For example:  
 ```javascript
@@ -57,7 +57,7 @@ function advice(age) {
 advice(19);
 console.log(suggestion); //Uncaught referenceError: suggestion is not defined.
 ```  
-In this example the variable suggestion is only accessible inside the advice function. When we try to console log its value we receive an error that suggestion is not defined. This is do to the var keywords scope which is limited within the function.
+In this example the variable suggestion is only accessible inside the advice function. When we try to console log its value we receive an error that suggestion is not defined.
 
 Let's update the code example to log the value of suggestion now inside the advice function:
 ```javascript
@@ -68,12 +68,26 @@ function advice(age) {
     var praise = "Happy birthday kid!";
   }
   console.log(suggestion); // Hope your saving for retirement...
+}
+
+advice(19);
+```  
+The console reports back "Hope your saving for retirement..." for the suggestion value. The suggestion variables value is now accessible (in scope) inside of the function.
+
+What would happen if we tried to access the value of praise instead:  
+```javascript
+function advice(age) {
+  if (age > 18) {
+    var suggestion = "Hope your saving for retirement...";
+  } else {
+    var praise = "Happy birthday kid!";
+  }
   console.log(praise); // undefined.
 }
 
 advice(19);
 ```  
-The console reports back "Hope your saving for retirement..." for the suggestion value and undefined for the value of the praise variable. The advice variables value is accessible (in scope) inside of the function. But wait a minute why did the the console log for the praise variable report its value as "undefined" instead of a proper error message like "Uncaught referenceError: praise is not defined." This is because JavaScript does something sneaky, it hoists variable declarations to the top of the function scope. It is essentially doing this for us behind the scenes:  
+Wait a minute why did the the console log praise's value as "undefined" instead of a proper error message like "Uncaught referenceError: praise is not defined." This is because JavaScript does something sneaky, it hoists variable declarations to the top of the function scope. It is essentially doing this for us behind the scenes:  
 ```javascript
 function advice(age) {
   var suggestion, praise; // variables declared with var keyword are hoisted to top of function.
@@ -88,13 +102,13 @@ function advice(age) {
 
 advice(19);
 ```  
-Here we can see that hosting is when JavaScript automatically lifts the variable declaration to the top of the function scope. `var suggestion, praise;` is declared but no value is assigned at that point. This means that when we try to log its value inside of the function before we have assigned a value, it will hold the value of undefined. It is treated as a variable that has been named but is holding no value up until the point that we set it a value inside our if/else condition. If the else condition never runs then its value remains undefined.
+So hosting is when JavaScript automatically lifts the variable declaration to the top of the function scope. `var suggestion, praise;` is declared at the top iof the function, but no value is assigned at that point. This means that when we try to log its value inside of the function before we have assigned a value, it will hold the value of undefined. It is treated as a variable that has been named but is holding no value up until the point that we set a value inside our if/else condition. If the else condition never runs such as in the case above then its value remains undefined.
 
-It would be nice to get a proper error message in these situations and have some control to prevent JavaScript from hoisting variables to the top of the function. To protect ourselves it would be ideal in this case to limit the scopr of the variables to inside the blocks of the if/else `{}` curly braces.
+It would be nice to get a proper error message in these situations and have some control to prevent JavaScript from hoisting variables to the top of the function. To protect ourselves it would be ideal in this case to limit the scope of the variables to inside the blocks of the if/else `{}` curly braces.
 
 ## Introducing Let
 
-Here we can accomplish this using the let keyword in place of var.  
+Here we can accomplish limiting varibales to block scope by using the let keyword in place of var.  
 ```javascript
 function advice(age) {
   if (age > 18) {
@@ -111,13 +125,13 @@ function advice(age) {
 advice(19);
 advice(12);
 ```  
-The previous code illustrates that the variables declared using the let keyword are scoped within the if/else block instead of the entire function as wit hte var keyword. The console logs inside the if/else blocks report the correct values where as logging the values outside of the if/else blocks throws an appropriate error message. The let keyword only hoists to the top of each block as opposed to the top of the function they are found within.
+The previous code illustrates that the variables declared using the let keyword are scoped within the if/else block instead of the entire function. The console logs inside the if/else blocks report the correct values, where as logging the values outside of the if/else blocks throws an the expected error message.
 
 ## Summary
 
+- The syntax for using let is `let x = 12;`.
 - The let keyword allows us to scope variables inside their block.
-- The let keyword only hoists variables to the top of the current block preventing unexpected undefined values like we might see when using var.
-- The syntax for declaring a block scoped variable is `let x = 12;`.
+- The let keyword doesn't hoist variables to the top of the function, which gives us clear errors when we try to interact with them outside of their scope.
 
 ## Resources
 
