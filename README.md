@@ -53,6 +53,7 @@ function birthday(age) {
   }
   return response;
 }
+
 console.log(response); //Uncaught referenceError: response is not defined.
 ```  
 In this example the variable response is only accessible inside the function birthday. When we try to console log its value we recieve an error that response is undefined. This is do to the var keywords scope which is limited within the function.
