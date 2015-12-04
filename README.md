@@ -2,19 +2,19 @@
 
 ## Overview
 
-In this lesson, we'll get to know ES2015's let keyword. We'll see that let carries with it a different scope for declaring variables than the var keyword.
+In this lesson, you will get to know ES2015's let keyword.
 
 ## Objectives
 
 1. Understand how to declare variables using the let keyword.
 2. Understand the scoping differences between let and var.
-3. Appreciate how let prevents variable hoisting issues.
+3. Understand how let hoists differently than var.
 
 <!-- iframe of video lecture goes here -->
 
 ## Function Scope vs Block Scope
 
-The let keyword is an alternative to using the var keyword to declare variables . "let" behaves more in line with other programming languages like C or Java that use block scope. To understand block scope let us first describe blocks.
+The let keyword is an alternative to using the var keyword to declare variables. "let" behaves more in line with other programming languages like C or Java that use block scope. To understand block scope let us first describe blocks.
 
 ### What are blocks?
 
@@ -36,24 +36,27 @@ or a generic blocks defined by just braces alone.
   // all code here is also a generic block.
 }
 ```  
-Again, the important character to distingush these blocks are the curly braces `{}`.
+Again, the important character to distingush these blocks are the curly braces `{}`. The braces themselves form a scope gate.
 
 To appreciate how the let keyword differs let's first take a look at how the var keyword scopes variables.
 
-### Functional Scope
+### Lexical (Function) Scope
 
-In JavaScript using the var keyword gives you functional scope, meaning that variables that are declared within the curly braces of the function declaration are only can be accessible inside of that function. For example  
+In JavaScript using the var keyword, variables are lexically scoped to the function they are within. This means that variables that are declared within the function declaration are only accessible inside of that function and are not accessable outside of that function. For example:  
 ```javascript
-
-var realAge = 35;
-
-function getAge() {
-  
-  return StartingAge += 1;
+function birthday(age) {
+  age++;
+  if (age > 18) {
+    var response = "Hope your saving for retirement...";
+  } else {
+    var response = "Happy Bithday kid!";
+  }
+  return response;
 }
-```
+console.log(response); // reports Uncaught referenceError: response is not defined.
+```  
+In this example the variable response is only accessible inside the function birthday. When we try to console log its value we recieve an error that response is undefined. This is do to the var keywords scope which is limited within the function.
 
-...
 
 ## Resources
 
