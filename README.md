@@ -44,7 +44,7 @@ To appreciate how the let keyword differs let's first take a look at how the var
 
 ### Function Scope and Hoisting
 
-In JavaScript using the var keyword, variables are lexically scoped to the function they are within. This means that variables that are declared within the function declaration are only accessible inside of that function and are not accessable outside of that function. For example:  
+In JavaScript when using the var keyword, variables are lexically scoped to the function they are inside of. This means that variables that are declared within the function declaration are only accessible inside of that function and are not accessable outside of that function. For example:  
 ```javascript
 function advice(age) {
   if (age > 18) {
