@@ -1,4 +1,4 @@
-# Using The Let Keyword
+# Let
 
 ## Overview
 
