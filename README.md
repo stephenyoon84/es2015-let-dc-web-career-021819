@@ -1,9 +1,10 @@
 # Using The Let Keyword
 
+*Note: The code examples from this lesson can be run by pasting them into [Babel's online REPL](https://babeljs.io/repl/)*
+
 ## Overview
 
 In this lesson, you will get to know ES2015's let keyword.
-*Note: The code examples from this lesson can be run by pasting them into [Babel's online REPL](https://babeljs.io/repl/)*
 
 ## Objectives
 
