@@ -6,6 +6,8 @@ tags:
  - let
  - var
  - scope
+prerequisites:
+ - es5
 type:
  - readme
 resources: 2
