@@ -10,11 +10,9 @@ In this lesson, you will get to know ES2015's let keyword.
 2. Understand the scoping differences between let and var.
 3. Understand how let hoists differently than var.
 
-## ~ ?min
-
 <!-- iframe of video lecture goes here -->
 
-*The code examples from this lesson can be run by pasting them into [Babel's online REPL](https://babeljs.io/repl/)*
+*Note: The code examples from this lesson can be run by pasting them into [Babel's online REPL](https://babeljs.io/repl/)*
 
 ## Function Scope vs Block Scope
 
@@ -139,5 +137,6 @@ The code above illustrates that the variables declared using the let keyword are
 
 - [MDN - JavaScript - Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 - [MDN - JavaScript - Block](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
+- [ES5 to ES6 Feature Comparison](http://es6-features.org/)
 
 <a href='https://learn.co/lessons/es2015-let' data-visibility='hidden'>View this lesson on Learn.co</a>
