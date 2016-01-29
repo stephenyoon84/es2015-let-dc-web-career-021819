@@ -139,4 +139,4 @@ The code above illustrates that the variables declared using the let keyword are
 - [MDN - JavaScript - Block](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
 - [ES5 to ES6 Feature Comparison](http://es6-features.org/)
 
-<a href='https://learn.co/lessons/es2015-let' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/es2015-let' title='Let'>Let</a> on Learn.co and start learning to code for free.</p>
